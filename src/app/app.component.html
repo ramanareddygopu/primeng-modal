@@ -1,0 +1,51 @@
+<p-button
+  (click)="showBasicDialog()"
+  icon="pi pi-external-link"
+  label="Show"
+></p-button>
+<p-dialog
+  header="Header"
+  [(visible)]="displayBasic"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+>
+  <div class="wrapper">
+    <div class="left-wrapper">
+      <div class="field-wrapper">
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Input 1</label>
+        </span>
+      </div>
+      <div class="field-wrapper">
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Input 2</label>
+        </span>
+      </div>
+      <div class="field-wrapper">
+        <span class="p-float-label">
+          <input id="float-input" type="text" pInputText />
+          <label for="float-input">Input 3</label>
+        </span>
+      </div>
+    </div>
+    <div class="right-wrapper">
+      <div>With Shadow DOM Fields</div>
+      <app-testing-shadow-dom></app-testing-shadow-dom>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-check"
+      (click)="displayBasic = false"
+      label="Yes"
+      styleClass="p-button-text"
+    ></p-button>
+    <p-button
+      icon="pi pi-times"
+      (click)="displayBasic = false"
+      label="No"
+    ></p-button>
+  </ng-template>
+</p-dialog>

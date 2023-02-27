@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.field-wrapper {
+  padding-bottom: 10px;
+}
